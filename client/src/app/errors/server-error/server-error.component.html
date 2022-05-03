@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Server Error</h1>
+    <h4>Try refreshing the page</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-danger">
+            Error: {{error.message}}
+        </h5>
+        <p>What to do</p>
+        <ol>
+            <li>Open chrome dev tools</li>
+            <li>Inpects the network tab</li>
+            <li>Check the failing request</li>
+            <li>Examine the request url</li>
+        </ol>
+        <p>Stack trace</p>
+        <code class="mt-5" style="background-color: whitesmoke;">
+            {{error.details}}
+        </code>
+    </ng-container>
+    <br>
+    <button class="btn btn-info btn-lg" routerLink="/">Server Error</button>
+</div>

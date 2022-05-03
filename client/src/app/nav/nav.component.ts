@@ -18,9 +18,6 @@ model:any = {};
 login(){
   this.auth.login(this.model).subscribe(response =>{
     this.router.navigateByUrl('/members')
-  }, error=>{
-    console.log(error);
-    this.toastr.error(error.error)
   });
 }
 logout(){
